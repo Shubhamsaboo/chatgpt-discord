@@ -22,3 +22,8 @@ By the end of this journey, you will understand the impressive capabilities of c
 - Troubleshooting Common Issues
 - Conclusion
 
+### Instructions to Use
+
+1. Create a virtual environment via PIP or Conda.
+2. Install the necessary libraries from `requirements.txt` file. 
+3. Run the main.py script by opening a terminal/command prompt, navigating to the folder containing the script, and entering `python main.py`
