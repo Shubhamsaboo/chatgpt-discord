@@ -14,7 +14,7 @@ async def generate_response(prompt):
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=conversation_history,
-            max_tokens=150,
+            max_tokens=350,
             n=1,
             stop=None,
             temperature=0.7,
