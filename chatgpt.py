@@ -1,8 +1,8 @@
-import openai
+from openai import OpenAI
 
 from config import OPENAI_API_KEY
 
-openai.api_key = OPENAI_API_KEY
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 async def generate_response(prompt):
     try:
@@ -11,8 +11,8 @@ async def generate_response(prompt):
             {"role": "user", "content": f"{prompt}"},
         ]
 
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
             messages=conversation_history,
             max_tokens=350,
             n=1,
